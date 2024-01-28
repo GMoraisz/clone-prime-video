@@ -12,7 +12,7 @@ interface DropdownLinkProps {
 }
 
 const DropdownLink: React.FC<DropdownLinkProps> = ({ text, href }) => (
-    <Link href={href} className="block pr-3.5 text-xl py-2.5 text-secondary hover:bg-primary hover:w-full whitespace-nowrap">
+    <Link href={href} className="block pr-3.5 text-xl py-2.5 text-secondary hover:bg-primary hover:text-black hover:w-full whitespace-nowrap">
         {text}
     </Link>
 );
