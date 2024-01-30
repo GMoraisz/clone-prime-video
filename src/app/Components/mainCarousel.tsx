@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { RxDotFilled } from 'react-icons/rx';
+
 
 interface Films {
   thumbnailUrl: string;
@@ -9,7 +11,7 @@ interface Films {
 
 const MainCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [containerClass, setContainerClass] = useState('h-56 w-full m-auto'); // Default value
+  const [containerClass, setContainerClass] = useState('h-52 w-full m-auto'); // Default value
 
   const slides: Films[] = [
     { thumbnailUrl: "https://i.imgur.com/e0cRMKj.jpg" },
@@ -34,7 +36,7 @@ const MainCarousel: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setContainerClass('h-56 w-full m-auto');
+        setContainerClass('h-52 w-full m-auto');
       } else {
         setContainerClass('');
       }
@@ -66,6 +68,15 @@ const MainCarousel: React.FC = () => {
       <div className={`absolute top-[50%] -translate-x-0 translate-y-[-50%] right-1 text-2xl rounded-full 
             p-2 bg-black/20 text-white cursor-pointer`} onClick={goToNextSlide}>
         <BsChevronCompactRight size={30} />
+      </div>
+      <div className='flex top-4 justify-center py-2'>
+        {slides.map((_, index) => (
+          <div key={index}
+            className={`mx-1 cursor-pointer ${index === currentIndex ? 'text-white' : 'text-hover'}`}
+            onClick={() => setCurrentIndex(index)}>
+            <RxDotFilled size={30} />
+          </div>
+        ))}
       </div>
     </div>
   );

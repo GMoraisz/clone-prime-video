@@ -16,7 +16,7 @@ export default function Home() {
           <MainCarousel />
         </div>
 
-        <div className="mt-6">
+        <div className="mt-20">
           <SportsList />
         </div>
       </main>

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { RxDotFilled } from 'react-icons/rx';
 
 // Defina a interface para o objeto Sports
 interface Sports {
@@ -10,16 +11,16 @@ interface Sports {
 
 const SportsList: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [containerClass, setContainerClass] = useState('py-72'); // Defina o valor padrão
+  const [containerClass, setContainerClass] = useState('h-72 w-full m-auto'); // Default value
 
   const slides: Sports[] = [
-    { thumbnailUrl: "https://imgur.com/PYUPehl.png" },
-    { thumbnailUrl: "https://imgur.com/BThPUMn.png" },
-    { thumbnailUrl: "https://imgur.com/gGuu5dg.png" },
-    { thumbnailUrl: "https://imgur.com/ayIG9Eb.png" },
-    { thumbnailUrl: "https://imgur.com/Xd4zSgW.png" },
-    { thumbnailUrl: "https://imgur.com/nRcub9v.png" },
-    { thumbnailUrl: "https://imgur.com/27xCf2e.jpg" },
+    { thumbnailUrl: "https://imgur.com/k3bA2zF.jpg" },
+    { thumbnailUrl: "https://imgur.com/WTj5gQa.jpg" },
+    { thumbnailUrl: "https://imgur.com/mQmFuos.png" },
+    { thumbnailUrl: "https://imgur.com/XggTBXh.png" },
+    { thumbnailUrl: "https://imgur.com/UwkF1iT.png" },
+    { thumbnailUrl: "https://imgur.com/u74CTa1.png" },
+    { thumbnailUrl: "https://imgur.com/PfETgM3.png" },
   ];
 
   const goToPreviousSlide = () => {
@@ -33,7 +34,7 @@ const SportsList: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setContainerClass('py-72');
+        setContainerClass('h-72 w-full m-auto');
       } else {
         setContainerClass('');
       }
@@ -51,7 +52,7 @@ const SportsList: React.FC = () => {
   const transitionDuration = 0.5; // Defina a duração da transição em segundos
 
   return (
-    <div className={`max-w-[1200px] h-[900px] w-full m-auto relative ${containerClass}`}>
+    <div className={`max-w-[1180px] h-[660px] w-full m-auto relative ${containerClass}`}>
       <div
         style={{
           backgroundImage: `url(${slides[currentIndex].thumbnailUrl})`,
@@ -69,6 +70,16 @@ const SportsList: React.FC = () => {
             p-2 bg-black/20 text-white cursor-pointer' onClick={goToNextSlide}>
         <BsChevronCompactRight size={30} />
       </div>
+      <div className='flex top-4 justify-center py-2'>
+        {slides.map((_, index) => (
+          <div key={index}
+            className={`mx-1 cursor-pointer ${index === currentIndex ? 'text-white' : 'text-hover'}`}
+             onClick={() => setCurrentIndex(index)}>
+            <RxDotFilled size={30} />
+          </div>
+        ))}
+      </div>
+
     </div>
   );
 };
