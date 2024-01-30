@@ -1,59 +1,72 @@
 "use client";
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
 
+import React, { useState, useEffect } from 'react';
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string;
+interface Films {
+  thumbnailUrl: string;
 }
 
 const MainCarousel: React.FC = () => {
-  const [movies, setMovies] = useState<Movie[]>([]);
-  const apiKey = '0d16df4c106d6090ab663e2861ec7cee';
-  const language = 'pt-BR';
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [containerClass, setContainerClass] = useState('h-56 w-full m-auto'); // Default value
+
+  const slides: Films[] = [
+    { thumbnailUrl: "https://i.imgur.com/e0cRMKj.jpg" },
+    { thumbnailUrl: "https://imgur.com/LCSxyDb.png" },
+    { thumbnailUrl: "https://i.imgur.com/VvdcTlg.jpg" },
+    { thumbnailUrl: "https://i.imgur.com/ivJHWTB.jpg" },
+    { thumbnailUrl: "https://i.imgur.com/LfAOeZQ.jpg" },
+    { thumbnailUrl: "https://i.imgur.com/uNwx9GA.jpg" },
+    { thumbnailUrl: "https://i.imgur.com/ol5g5dX.jpg" },
+    { thumbnailUrl: "https://i.imgur.com/LujHU6w.jpg" },
+    { thumbnailUrl: "https://i.imgur.com/ellh6Vg.jpg" },
+  ];
+
+  const goToPreviousSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
+  };
+
+  const goToNextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
+  };
 
   useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await axios.get(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=${language}`
-        );
-
-        setMovies(response.data.results);
-      } catch (error) {
-        console.error('Erro ao obter dados:', error);
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setContainerClass('h-56 w-full m-auto');
+      } else {
+        setContainerClass('');
       }
     };
 
-    fetchMovies();
-  }, [apiKey, language]);
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
-    <div className='text-primary text-2xl mt-12 text-center font-medium shadow-md'>
-      <h2 className='mb-5'>Filmes Populares</h2>
-      <Swiper
-        spaceBetween={10}
-        slidesPerView={3}
-        navigation
-        pagination={{ clickable: true }}
-      >
-        {movies.map((movie) => (
-          <SwiperSlide key={movie.id} style={{ maxWidth: '250px' }}>
-            <div>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title}
-                style={{ maxWidth: '100%', height: 'auto' }}
-              />
-              <p className='mt-4'>{movie.title}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className={`max-w-[1440px] h-[560px] w-full m-auto relative  ${containerClass}`}>
+      <div
+        style={{
+          backgroundImage: `url(${slides[currentIndex].thumbnailUrl})`,
+          transition: `background-image 0.5s ease-in-out`,
+        }}
+        className='w-full h-full rounded-2xl bg-center bg-cover relative'
+
+      />
+      <div className={`absolute top-[50%] -translate-x-0 translate-y-[-50%] left-1 text-2xl rounded-full
+             p-2 bg-black/20 text-white cursor-pointer`} onClick={goToPreviousSlide}>
+        <BsChevronCompactLeft size={30} />
+      </div>
+      <div className={`absolute top-[50%] -translate-x-0 translate-y-[-50%] right-1 text-2xl rounded-full 
+            p-2 bg-black/20 text-white cursor-pointer`} onClick={goToNextSlide}>
+        <BsChevronCompactRight size={30} />
+      </div>
     </div>
   );
 };

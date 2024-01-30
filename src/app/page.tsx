@@ -2,6 +2,8 @@ import React from "react";
 import Footer from "./Components/footer";
 import Header from "./Components/navBar";
 import MainCarousel from "./Components/mainCarousel";
+import SportsList from "./Components/sports";
+
 
 export default function Home() {
   return (
@@ -10,8 +12,13 @@ export default function Home() {
         <Header />
       </header>
       <main>
-        <MainCarousel />
+        <div className="mt-4">
+          <MainCarousel />
+        </div>
 
+        <div className="mt-6">
+          <SportsList />
+        </div>
       </main>
       <footer>
         <Footer />

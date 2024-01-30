@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
           <Image
             src="/images/primevideo.png"
             width={165}
-            height={50}
-            alt="Picture of the author"
+            height={165}
+            alt="Amazon Logo"
           />
         </div>
         <ul className="flex space-x-4 justify-center">
