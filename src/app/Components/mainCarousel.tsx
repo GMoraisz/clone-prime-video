@@ -11,15 +11,15 @@ interface Films {
 
 const MainCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [containerClass, setContainerClass] = useState('h-52 w-full m-auto'); // Default value
+  const [containerClass, setContainerClass] = useState('h-[200px] w-full m-auto'); // Default value
 
   const slides: Films[] = [
     { thumbnailUrl: "https://i.imgur.com/e0cRMKj.jpg" },
-    { thumbnailUrl: "https://imgur.com/LCSxyDb.png" },
+    { thumbnailUrl: "https://imgur.com/xEXpvk5.png" },
     { thumbnailUrl: "https://i.imgur.com/VvdcTlg.jpg" },
     { thumbnailUrl: "https://i.imgur.com/ivJHWTB.jpg" },
     { thumbnailUrl: "https://i.imgur.com/LfAOeZQ.jpg" },
-    { thumbnailUrl: "https://i.imgur.com/uNwx9GA.jpg" },
+    { thumbnailUrl: "https://imgur.com/NmIdYFL.png" },
     { thumbnailUrl: "https://i.imgur.com/ol5g5dX.jpg" },
     { thumbnailUrl: "https://i.imgur.com/LujHU6w.jpg" },
     { thumbnailUrl: "https://i.imgur.com/ellh6Vg.jpg" },
@@ -36,7 +36,7 @@ const MainCarousel: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setContainerClass('h-52 w-full m-auto');
+        setContainerClass('h-[200px] w-full m-auto');
       } else {
         setContainerClass('');
       }
@@ -52,7 +52,7 @@ const MainCarousel: React.FC = () => {
   }, []);
 
   return (
-    <div className={`max-w-[1440px] h-[560px] w-full m-auto relative  ${containerClass}`}>
+    <div className={`max-w-[1200px] h-[600px] w-full m-auto relative  ${containerClass}`}>
       <div
         style={{
           backgroundImage: `url(${slides[currentIndex].thumbnailUrl})`,

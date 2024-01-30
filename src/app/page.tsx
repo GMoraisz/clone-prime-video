@@ -2,10 +2,11 @@ import React from "react";
 import Footer from "./Components/footer";
 import Header from "./Components/navBar";
 import MainCarousel from "./Components/mainCarousel";
-import SportsList from "./Components/sports";
+import SeriesList from "./Components/series";
+import SignaturesList from "./Components/signatures";
 
 
-export default function Home() {
+export default function App() {
   return (
     <div>
       <header>
@@ -17,8 +18,13 @@ export default function Home() {
         </div>
 
         <div className="mt-20">
-          <SportsList />
+          <SeriesList />
         </div>
+
+        <div className="mt-40">
+          <SignaturesList />
+        </div>
+
       </main>
       <footer>
         <Footer />

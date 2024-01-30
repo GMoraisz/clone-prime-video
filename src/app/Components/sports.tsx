@@ -17,7 +17,7 @@ const SportsList: React.FC = () => {
     { thumbnailUrl: "https://imgur.com/k3bA2zF.jpg" },
     { thumbnailUrl: "https://imgur.com/WTj5gQa.jpg" },
     { thumbnailUrl: "https://imgur.com/mQmFuos.png" },
-    { thumbnailUrl: "https://imgur.com/XggTBXh.png" },
+    { thumbnailUrl: "https://imgur.com/XggTBX h.png" },
     { thumbnailUrl: "https://imgur.com/UwkF1iT.png" },
     { thumbnailUrl: "https://imgur.com/u74CTa1.png" },
     { thumbnailUrl: "https://imgur.com/PfETgM3.png" },
