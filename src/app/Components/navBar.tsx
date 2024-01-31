@@ -23,7 +23,7 @@ const InicioDropdown: React.FC = () => (
     <div className="hidden group-hover:block absolute bg-hover rounded-md text-center">
         <DropdownLink text="Todos" href="/home" />
         <DropdownLink text="Filmes" href="/mainCarousel" />
-        <DropdownLink text="Séries" href="/SeriesList" />
+        <DropdownLink text="Séries" href="/series" />
         <DropdownLink text="Esportes" href="/esportes" />
     </div>
 );
@@ -51,9 +51,9 @@ const PerfilDropdown: React.FC = () => (
         <DropdownLink text="Assista onde quiser" href="/sua-lista" />
         <DropdownLink text="Conta e configurações" href="/compras-alugueis" />
         <DropdownLink text="Benefícios Prime" href="/compras-alugueis" />
-        <DropdownLink text="" href="/compras-alugueis" />
+       
 
-        <h2 className='text-2xl mb-4'> Perfis</h2>
+        <h2 className='text-2xl mb-2 mt-4'> Perfis</h2>
         <DropdownLink text="(+) Adicionar novo perfil" href="/todos" />
         <DropdownLink text="Editar perfis" href="/sua-lista" />
         <DropdownLink text="Saiba mais" href="/compras-alugueis" />
@@ -137,11 +137,11 @@ const Header: React.FC = () => {
 
     return (
         <header className="text-primary py-6 font-medium">
-            <div className="bg-background flex items-center justify-center fixed top-0 left-0 right-0 z-50 shadow-md rounded-md ml-32 mr-12 py-1.5">
-                {navLinkWithDropdown('prime video', '/home', true, 'mr-8',)}
+            <div className="bg-background flex items-center justify-center fixed top-0 left-0 right-0 z-50 shadow-md rounded-md ml-32 mr-12 py-1.5 ">
+                {navLinkWithDropdown('prime video', '/home', true, 'mr-8' ,)}
                 {navLinkWithDropdown('Início', '/home', false, 'mr-3.5')}
                 {navLinkWithDropdown('Loja', '/', false, 'mr-3.5')}
-                {navLinkWithDropdown('TV ao vivo', '/sports', false, 'mr-3.5')}
+                {navLinkWithDropdown('TV ao vivo', '/live', false, 'mr-3.5')}
                 {navLinkWithDropdown('Categorias', '/', false, 'mr-3.5')}
                 {navLinkWithDropdown('Minha área', '/', false)}
                 {navLinkWithDropdown('Search', '/', false, 'ml-12')}

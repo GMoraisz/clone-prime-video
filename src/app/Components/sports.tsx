@@ -29,10 +29,10 @@ const SportsList: React.FC = () => {
     setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
   };
 
-  const transitionDuration = 0.5; 
+  const transitionDuration = 0.75; 
 
   return (
-    <div className={`max-w-[1180px] h-[660px] w-full m-auto relative`}>
+    <div className={`max-w-[1080px]  h-[225px]  w-full m-auto relative mt-24 lg:h-[615px]`}>
       <div
         style={{
           backgroundImage: `url(${slides[currentIndex].thumbnailUrl})`,

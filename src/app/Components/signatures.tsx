@@ -10,6 +10,7 @@ const SignaturesList: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const imagesPerSlide = 2;
 
+
     const slides: Signatures[] = [
         { thumbnailUrl: "https://imgur.com/u3NYB6O.png" },
         { thumbnailUrl: "https://imgur.com/wSXqYFN.png" },
@@ -29,19 +30,21 @@ const SignaturesList: React.FC = () => {
         setCurrentIndex((prevIndex) => (prevIndex + imagesPerSlide >= slides.length ? 0 : prevIndex + imagesPerSlide));
     };
 
+    const transitionDuration = 0.4;
+
     return (
-        <div className={`max-w-[1250px] h-[195px] w-full m-auto relative overflow-hidden lg:h-[350px] `}>
-            <div className="ml-6 flex shadow-black mb-2 text-xl font-semibold">
-                <span className={`text-${currentIndex === 0 ? 'primary' : 'tertiary'}`}>
-                    {currentIndex === 0 ? 'Minhas Assinaturas' : 'Você Pode Gostar'}
-                </span>
-            </div>
-            <div className="h-full flex gap-4 overflow-hidden">
+        <div className={`max-w-[800px] h-[200px] w-full m-auto relative overflow-hidden lg:h-[305px] text-center `}>
+            <h1 className='text-tertiary text-2xl shadow-black font-semibold'> Minhas assinaturas </h1>
+          
+            <div className="h-full flex gap-4 overflow-hidden mt-1.5">
                 {slides.slice(currentIndex, currentIndex + imagesPerSlide).map((slide, index) => (
                     <div
                         key={index}
-                        className={`w-1/2 h-full rounded-2xl bg-center bg-cover transition-transform transform hover:scale-90`}
-                        style={{ backgroundImage: `url(${slide.thumbnailUrl})` }}
+                        className={`w-1/2 h-full rounded-2xl bg-center bg-cover `}
+                        style={{ backgroundImage: `url(${slide.thumbnailUrl})`,
+                        transition: `background-image ${transitionDuration}s ease-in-out`,
+                     }}
+                        
                     />
                 ))}
             </div>

@@ -19,12 +19,12 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>{children}
-      <div> 
-          <Header/>
-          </div>
-          <div> 
-              <Footer/>
-          </div>
+        <div>
+          <Header />
+        </div>
+        <div>
+          <Footer />
+        </div>
       </body>
     </html>
   );

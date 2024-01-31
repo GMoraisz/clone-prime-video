@@ -33,7 +33,7 @@ const SeriesList: React.FC = () => {
     const transitionDuration = 0.5; // Defina a duração da transição em segundos
 
     return (
-        <div className={`max-w-[1150px] h-[200px] lg:h-[560px]   w-full m-auto relative`}>
+        <div className={`max-w-[1175px] h-[200px] lg:h-[680px]   w-full m-auto relative`}>
             <div className='ml-6 flex shadow-black mb-2 text-xl font-semibold'>
                 <h1 className='text-blue-500 mr-5'> Prime </h1>
                 <span className='text-primary '> Séries com as melhores notas no IMDb</span>
@@ -46,13 +46,12 @@ const SeriesList: React.FC = () => {
                 className='w-full h-full rounded-2xl bg-center bg-cover relative'
             />
             {/* Seta Esquerda */}
-            <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-1 text-2xl rounded-full
-             p-2 bg-black/20 text-white cursor-pointer' onClick={goToPreviousSlide}>
+            <div className={`absolute top-[82%] lg:top-[56.5%] -translate-x-0 translate-y-[-50%] left-1 text-2xl rounded-full
+             p-2 bg-black/20 text-white cursor-pointer`} onClick={goToPreviousSlide}>
                 <BsChevronCompactLeft size={30} />
             </div>
-            {/* Seta Direita */}
-            <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-1 text-2xl rounded-full 
-            p-2 bg-black/20 text-white cursor-pointer' onClick={goToNextSlide}>
+            <div className={`absolute top-[82%] lg:top-[56.5%] -translate-x-0 translate-y-[-50%] right-1 text-2xl rounded-full 
+            p-2 bg-black/20 text-white cursor-pointer`} onClick={goToNextSlide}>
                 <BsChevronCompactRight size={30} />
             </div>
             <div className='flex top-4 justify-center py-2'>

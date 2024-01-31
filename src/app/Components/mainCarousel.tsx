@@ -23,6 +23,7 @@ const MainCarousel: React.FC = () => {
     { thumbnailUrl: "https://i.imgur.com/ellh6Vg.jpg" },
   ];
 
+
   const goToPreviousSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
   };
@@ -31,12 +32,14 @@ const MainCarousel: React.FC = () => {
     setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
   };
 
+  const transitionDuration = 0.65;
+
   return (
-    <div className={`max-w-[1400px] h-[210px] lg:h-[550px] w-full m-auto mt-16 relative`}>
+    <div className={`max-w-[1350px] h-[210px] lg:h-[700px] w-full m-auto mt-20 relative`}>
       <div
         style={{
           backgroundImage: `url(${slides[currentIndex].thumbnailUrl})`,
-          transition: `background-image 0.5s ease-in-out`,
+          transition: `background-image ${transitionDuration}s linear`,
         }}
         className='w-full h-full rounded-2xl bg-center bg-cover relative'
       />
