@@ -1,6 +1,5 @@
 "use client";
-
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 
 interface Signatures {
@@ -8,84 +7,55 @@ interface Signatures {
 }
 
 const SignaturesList: React.FC = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [visibleSlides, setVisibleSlides] = useState(5);
-    const [containerClass, setContainerClass] = useState('h-[175px] w-[200px] m-auto');
-    const slidesContainerRef = useRef<HTMLDivElement>(null);
-
     const slides: Signatures[] = [
         { thumbnailUrl: "https://imgur.com/u3NYB6O.png" },
         { thumbnailUrl: "https://imgur.com/wSXqYFN.png" },
         { thumbnailUrl: "https://imgur.com/mtGuO1Y.png" },
         { thumbnailUrl: "https://imgur.com/RPdgrEo.png" },
         { thumbnailUrl: "https://imgur.com/KOXPdkk.jpg" },
-        // Adicione mais slides conforme necessário
+        { thumbnailUrl: "https://imgur.com/h2GWiPr.jpg" },
+        { thumbnailUrl: "https://imgur.com/Ca84c5F.jpg" },
+        { thumbnailUrl: "https://imgur.com/ZBYWQpx.jpg" },
     ];
 
+    const [startIndex, setStartIndex] = useState(0);
+
+    const visibleSlides = 5;
+    const totalSlides = slides.length;
+
     const goToPreviousSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - visibleSlides < 0 ? slides.length - visibleSlides : prevIndex - visibleSlides));
+        setStartIndex((prevIndex) => Math.max(prevIndex - visibleSlides, 0));
     };
 
     const goToNextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + visibleSlides >= slides.length ? 0 : prevIndex + visibleSlides));
+        setStartIndex((prevIndex) => Math.min(prevIndex + visibleSlides, totalSlides - visibleSlides));
     };
 
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth <= 768) {
-                setContainerClass('h-[100px] w-[200px] m-auto');
-                setVisibleSlides(3);
-            } else {
-                setContainerClass('');
-                setVisibleSlides(5);
-            }
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        handleResize();
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    const transitionDuration = 0.75;
-    const spacingBetweenImages = 10;
-
     return (
-        <div className={`max-w-[1200px] h-[200px] w-full m-auto ml-12 relative ${containerClass}`}>
-            <div className='ml-6 flex shadow-black mb-2 text-xl font-semibold'>
-                {/* Outros elementos podem ser adicionados aqui */}
+        <div className={`max-w-[1200px] h-[260px] w-full m-auto relative overflow-hidden`}>
+            <div className="ml-6 flex shadow-black mb-2 text-xl font-semibold">
+                <span className={`text-${startIndex === 0 ? 'primary' : 'tertiary'}`}>{startIndex === 0 ? 'Minhas Assinaturas' : 'Você Pode Gostar'}</span>
             </div>
-            <div ref={slidesContainerRef} className='w-full h-full flex overflow-hidden'>
-                {slides.map((slide, index) => (
+            <div className="h-full flex gap-4 overflow-hidden">
+                {slides.slice(startIndex, startIndex + visibleSlides).map((slide, index) => (
                     <div
                         key={index}
-                        style={{
-                            flex: `0 0 ${100 / visibleSlides}%`,
-                            marginRight: index < slides.length - 1 ? `${spacingBetweenImages}px` : '0',
-                            transition: `transform ${transitionDuration}s ease-in-out`,
-                            transform: `translateX(-${currentIndex * (100 / visibleSlides)}%)`, // Ajuste para mover os slides
-                        }}
-                        className='w-full h-full rounded-2xl bg-center bg-cover relative'
-                    >
-                        <img src={slide.thumbnailUrl} alt={`Slide ${index + 1}`} className='w-full h-full rounded-2xl' />
-                    </div>
+                        className="w-full h-full rounded-2xl bg-center bg-cover transition-transform transform hover:scale-105"
+                        style={{ backgroundImage: `url(${slide.thumbnailUrl})` }}
+                    />
                 ))}
             </div>
             {/* Seta Esquerda */}
             <div
-                className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-1 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'
+                className={`absolute top-[50%] -translate-x-0 translate-y-[-50%] left-1 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer ${startIndex === 0 ? 'hidden' : ''}`}
                 onClick={goToPreviousSlide}
             >
                 <BsChevronCompactLeft size={30} />
             </div>
             {/* Seta Direita */}
             <div
-                className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-1 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'
+                className={`absolute top-[50%] -translate-x-0 translate-y-[-50%] right-1 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer ${startIndex + visibleSlides >= totalSlides ? 'hidden' : ''}`}
                 onClick={goToNextSlide}
-
             >
                 <BsChevronCompactRight size={30} />
             </div>

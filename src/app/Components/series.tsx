@@ -1,18 +1,15 @@
 "use client";
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
-// Defina a interface para o objeto Sports
+
 interface Series {
     thumbnailUrl: string;
 }
 
 const SeriesList: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [containerClass, setContainerClass] = useState('h-[190px] w-full m-auto'); // Default value
-
 
     const slides: Series[] = [
         { thumbnailUrl: "https://image.tmdb.org/t/p/original/25Dy3K6QPyZ1UBK6cTvFVNi6TeJ.jpg" },
@@ -25,8 +22,6 @@ const SeriesList: React.FC = () => {
         { thumbnailUrl: "https://image.tmdb.org/t/p/original/vVGsxdS0M8tTxjCd7pzMEgvT2ih.jpg" },
     ];
 
-
-
     const goToPreviousSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
     };
@@ -35,37 +30,18 @@ const SeriesList: React.FC = () => {
         setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
     };
 
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth <= 768) {
-                setContainerClass('h-[190px] w-full m-auto');
-            } else {
-                setContainerClass('');
-            }
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        handleResize();
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
     const transitionDuration = 0.5; // Defina a duração da transição em segundos
 
     return (
-        
-        <div className={`max-w-[1100px] h-[500px] w-full m-auto relative ${containerClass}`}>
-            <div className='ml-6 flex shadow-black mb-2 text-xl font-semibold'> 
-             <h1 className='text-blue-500 mr-5'> Prime </h1>
-             <span className='text-primary '> Séries com as melhores notas no IMDb</span>
-             </div>
+        <div className={`max-w-[1100px] h-[500px] w-full m-auto relative`}>
+            <div className='ml-6 flex shadow-black mb-2 text-xl font-semibold'>
+                <h1 className='text-blue-500 mr-5'> Prime </h1>
+                <span className='text-primary '> Séries com as melhores notas no IMDb</span>
+            </div>
             <div
                 style={{
                     backgroundImage: `url(${slides[currentIndex].thumbnailUrl})`,
-                    transition: `background-image 0.5s ease-in-out`,
+                    transition: `background-image ${transitionDuration}s ease-in-out`,
                 }}
                 className='w-full h-full rounded-2xl bg-center bg-cover relative'
             />
@@ -82,13 +58,12 @@ const SeriesList: React.FC = () => {
             <div className='flex top-4 justify-center py-2'>
                 {slides.map((slide, index) => (
                     <div key={slide.thumbnailUrl}
-                        className={`mx-1 cursor-pointer ${index === currentIndex ? 'text-white' : 'text-hover'}`} 
+                        className={`mx-1 cursor-pointer ${index === currentIndex ? 'text-white' : 'text-hover'}`}
                         onClick={() => setCurrentIndex(index)}>
                         <RxDotFilled size={30} />
                     </div>
                 ))}
             </div>
-
         </div>
     );
 };

@@ -1,9 +1,11 @@
 "use client";
 import Link from 'next/link';
 import { useState } from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar"
 import { HiOutlineSearch } from "react-icons/hi";
 import { IoChevronDown } from "react-icons/io5";
+
+
 
 
 interface DropdownLinkProps {
@@ -19,9 +21,9 @@ const DropdownLink: React.FC<DropdownLinkProps> = ({ text, href }) => (
 
 const InicioDropdown: React.FC = () => (
     <div className="hidden group-hover:block absolute bg-hover rounded-md text-center">
-        <DropdownLink text="Todos" href="/" />
-        <DropdownLink text="Filmes" href="/filmes" />
-        <DropdownLink text="Séries" href="/series" />
+        <DropdownLink text="Todos" href="/home" />
+        <DropdownLink text="Filmes" href="/mainCarousel" />
+        <DropdownLink text="Séries" href="/SeriesList" />
         <DropdownLink text="Esportes" href="/esportes" />
     </div>
 );
@@ -45,7 +47,7 @@ const MinhaAreaDropdown: React.FC = () => (
 const PerfilDropdown: React.FC = () => (
     <div className="hidden group-hover:block absolute bg-hover rounded-md text-center">
         <h2 className='text-2xl mt-6 mb-4'> Sua conta</h2>
-        <DropdownLink text="Ajuda" href="/todos" />
+        <DropdownLink text="Ajuda" href="/help" />
         <DropdownLink text="Assista onde quiser" href="/sua-lista" />
         <DropdownLink text="Conta e configurações" href="/compras-alugueis" />
         <DropdownLink text="Benefícios Prime" href="/compras-alugueis" />
@@ -136,10 +138,10 @@ const Header: React.FC = () => {
     return (
         <header className="text-primary py-6 font-medium">
             <div className="bg-background flex items-center justify-center fixed top-0 left-0 right-0 z-50 shadow-md rounded-md ml-32 mr-12 py-1.5">
-                {navLinkWithDropdown('prime video', '/', true, 'mr-8',)}
-                {navLinkWithDropdown('Início', '/', false, 'mr-3.5')}
+                {navLinkWithDropdown('prime video', '/home', true, 'mr-8',)}
+                {navLinkWithDropdown('Início', '/home', false, 'mr-3.5')}
                 {navLinkWithDropdown('Loja', '/', false, 'mr-3.5')}
-                {navLinkWithDropdown('TV ao vivo', '/', false, 'mr-3.5')}
+                {navLinkWithDropdown('TV ao vivo', '/sports', false, 'mr-3.5')}
                 {navLinkWithDropdown('Categorias', '/', false, 'mr-3.5')}
                 {navLinkWithDropdown('Minha área', '/', false)}
                 {navLinkWithDropdown('Search', '/', false, 'ml-12')}
