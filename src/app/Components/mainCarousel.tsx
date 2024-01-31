@@ -32,7 +32,7 @@ const MainCarousel: React.FC = () => {
   };
 
   return (
-    <div className={`max-w-[1300px] h-[625px] w-full m-auto mt-16 relative`}>
+    <div className={`max-w-[1400px] h-[210px] lg:h-[550px] w-full m-auto mt-16 relative`}>
       <div
         style={{
           backgroundImage: `url(${slides[currentIndex].thumbnailUrl})`,

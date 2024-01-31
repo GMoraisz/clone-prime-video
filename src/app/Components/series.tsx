@@ -33,7 +33,7 @@ const SeriesList: React.FC = () => {
     const transitionDuration = 0.5; // Defina a duração da transição em segundos
 
     return (
-        <div className={`max-w-[1100px] h-[500px] w-full m-auto relative`}>
+        <div className={`max-w-[1150px] h-[200px] lg:h-[560px]   w-full m-auto relative`}>
             <div className='ml-6 flex shadow-black mb-2 text-xl font-semibold'>
                 <h1 className='text-blue-500 mr-5'> Prime </h1>
                 <span className='text-primary '> Séries com as melhores notas no IMDb</span>
