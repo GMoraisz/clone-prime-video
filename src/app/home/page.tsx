@@ -1,6 +1,6 @@
 import React from "react";
 import MainCarousel from "../components/mainCarousel";
-import SeriesList from "../components/series";
+import SeriesList from "../components/betterRatingSeries";
 import SignaturesList from "../components/signatures";
 
 

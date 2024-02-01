@@ -56,7 +56,8 @@ const SportsList: React.FC = () => {
             className={`mx-1 cursor-pointer ${index === currentIndex ? 'text-white' : 'text-hover'}`}
              onClick={() => setCurrentIndex(index)}>
             <RxDotFilled size={30} />
-          </div>
+          </div>  
+          
         ))}
       </div>
 

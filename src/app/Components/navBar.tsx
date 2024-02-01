@@ -24,7 +24,7 @@ const InicioDropdown: React.FC = () => (
         <DropdownLink text="Todos" href="/home" />
         <DropdownLink text="Filmes" href="/mainCarousel" />
         <DropdownLink text="Séries" href="/series" />
-        <DropdownLink text="Esportes" href="/esportes" />
+        <DropdownLink text="Esportes" href="/live" />
     </div>
 );
 
