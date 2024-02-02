@@ -26,7 +26,7 @@ export default function RootLayout({
           <Navbar/>
           
         </div>
-        <div className="float-right">
+        <div>
           <Footer />
         </div>
       </body>

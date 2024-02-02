@@ -28,7 +28,7 @@ export default function Help() {
 
                 </div>
 
-                <div className="w-[400px] h-[225px]  ml-4 rounded border mt-6 float-left lg:ml-40 lg:h-[314px] lg:w-[250px] lg:mr-1.5">
+                <div className="w-[400px] h-[225px]  ml-4 rounded border mt-6 lg:ml-40 lg:h-[314px] lg:w-[250px] lg:mr-1.5 lg:float-left">
                     <ul className="grid gap-2 ml-2.5 mt-2 text-base font-medium ">
 
                         <h2 className="text-lg font-bold"> Configurações</h2>
@@ -69,7 +69,7 @@ export default function Help() {
                         alt="Amazon Logo"
                     />
                 </div>
-                <div className="bg-gray-100 h-[125px] mt-14 rounded py-2 pl-2">
+                <div className="bg-zinc-100 h-[125px] mt-14 rounded py-2 pl-2">
                     <a href="https://www.primevideo.com/help?nodeId=G3BQ95AL4WZLV9ZG" target="_blank">
                         <h2 className="font-bold text-lg "> Precisa cancelar a assinatura de um canal do Prime Video?</h2>
                     </a>

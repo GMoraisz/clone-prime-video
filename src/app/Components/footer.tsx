@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-screen lg:absolute w-full">
       <div className="flex-grow"></div>
-      <footer className="text-center text-footer py-6 font-medium text-sm">
+      <footer className="text-center text-footer py-6 font-medium text-sm bottom-0 w-full bg-black"> 
         <div className='flex justify-center items-center text-center ml-6'>
           <Image
             src="/images/primevideo.png"
@@ -13,9 +13,8 @@ const Footer: React.FC = () => {
             alt="Amazon Logo"
           />
         </div>
-        
-        <ul className="lg:flex space-x-4 justify-center">
 
+        <ul className="lg:flex space-x-4 justify-center">
           <li>
             <a href="https://www.primevideo.com/-/pt/help/ref=atv_ftr_ter?nodeId=202064890"
               target="_blank"
