@@ -11,7 +11,7 @@ export default function Help() {
     return (
 
 
-        <div className="bg-white mt-24 ">
+        <div className="bg-white mt-24 w-full h-full ">
             <div>
                 <div className="border-b border-gray-300 bg-gray-100 py-3.5">
                     <h1 className="ml-3.5 font-bold text-lg"> Ajuda </h1>
@@ -79,7 +79,7 @@ export default function Help() {
                 </div>
             </div>
 
-            <div className="w-[400px] h-[225px] mt-40 rounded-md border ml-4">
+            <div className="w-[400px] h-[225px] mt-6 rounded-md border ml-4">
 
             </div>
 
