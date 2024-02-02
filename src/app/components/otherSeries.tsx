@@ -30,7 +30,7 @@ const OtherSeries: React.FC = () => {
         setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
     };
 
-    const transitionDuration = 0.5; // Defina a duração da transição em segundos
+    const transitionDuration = 0.5;
 
     return (
         <div className={`max-w-[1175px] h-[200px] lg:h-[680px]   w-full m-auto relative`}>
