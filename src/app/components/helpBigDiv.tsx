@@ -4,7 +4,7 @@
 export default function BigDiv() {
     return (
         <div
-            className="mt-3 border border-gray-300 bg-stone-100 w-[408px] h-[500px] lg:w-[1350px] lg:h-[750px] text-base mb-2 pl-10 pr-2">
+            className="mt-3 border border-gray-300 bg-stone-100 w-[330px] h-[800px] lg:w-[1350px] lg:h-[750px] text-base mb-2 pl-10 pr-2">
             <ul className="grid  gap-4 mt-2 lg:text-xl font-semibold">
                 <li >
                     Configurações do Prime Video
