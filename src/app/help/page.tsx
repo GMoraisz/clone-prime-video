@@ -14,22 +14,22 @@ export default function Help() {
         <div className="bg-white mt-24 w-full h-full ">
             <div>
                 <div className="border-b border-gray-300 bg-gray-100 py-3.5">
-                    <h1 className="ml-3.5 font-bold text-lg"> Ajuda </h1>
+                    <h1 className="ml-3.5 font-bold text-lg lg:ml-14 lg:text-xl"> Ajuda </h1>
                 </div>
 
 
-                <div className="ml-2.5 mt-3">
-                    <h1 className="text-xl font-bold"> Suporte do Prime Video</h1>
+                <div className="ml-2.5 mt-3 lg:ml-40">
+                    <h1 className="text-xl font-bold text-start"> Suporte do Prime Video</h1>
                     <div className="relative">
-                        <input className="mt-3 border border-gray-300 rounded w-[408px] h-[47px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
+                        <input className="mt-3 border border-gray-300 rounded w-[408px] h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
                         <IoSearch className="size-6 absolute left-2 top-1/2 transform -translate-y-1/2 text-xl" />
                     </div>
 
 
                 </div>
 
-                <div className="w-[400px] h-[225px] ml-4 rounded border mt-6">
-                    <ul className="grid gap-2 ml-2.5 mt-2 text-base font-medium">
+                <div className="w-[400px] h-[225px]  ml-4 rounded border mt-6 float-left lg:ml-40 lg:h-[314px] lg:w-[250px] lg:mr-1.5">
+                    <ul className="grid gap-2 ml-2.5 mt-2 text-base font-medium ">
 
                         <h2 className="text-lg font-bold"> Configurações</h2>
 
@@ -60,7 +60,7 @@ export default function Help() {
                     </ul>
                 </div>
             </div>
-            <div className="w-[400px] h-full mt-6 rounded border ml-2">
+            <div className="w-[400px] h-full lg:w-[650px] mt-6 rounded border ml-2 lg:float-left">
                 <div className='flex justify-center items-center mt-16 text-center'>
                     <Image
                         src="/images/primevideohelp.png"
@@ -79,7 +79,7 @@ export default function Help() {
                 </div>
             </div>
 
-            <div className="w-[400px] h-[225px] mt-6 rounded-md border ml-4">
+            <div className="w-[400px] h-[225px] mt-6 rounded-md border ml-3 lg:float-left lg:w-[419.5px] lg:h-[314px]">
 
             </div>
 

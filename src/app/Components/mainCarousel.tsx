@@ -35,7 +35,7 @@ const MainCarousel: React.FC = () => {
   const transitionDuration = 0.65;
 
   return (
-    <div className={`max-w-[1350px] h-[210px] lg:h-[700px] w-full m-auto mt-20 relative`}>
+    <div className={`max-w-[1350px] h-[210px] lg:h-[700px] w-full m-auto mt-24 relative`}>
       <div
         style={{
           backgroundImage: `url(${slides[currentIndex].thumbnailUrl})`,
