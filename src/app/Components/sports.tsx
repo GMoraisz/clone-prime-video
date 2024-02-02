@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
-// Defina a interface para o objeto Sports
 interface Sports {
   thumbnailUrl: string;
 }

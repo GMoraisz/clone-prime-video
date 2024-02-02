@@ -67,7 +67,7 @@ const CategoriasDropdown: React.FC = () => (
         <div>
             <h2 className="text-2xl mt-3.5 mb-2">Gêneros</h2>
             <DropdownLink text="Ação e aventura" href="/" />
-            <DropdownLink text="Anime" href="/" />
+            <DropdownLink text="Anime" href="/anime" />
             <DropdownLink text="Comédia" href="/" />
             <DropdownLink text="Documentário" href="/" />
             <DropdownLink text="Drama" href="/" />
