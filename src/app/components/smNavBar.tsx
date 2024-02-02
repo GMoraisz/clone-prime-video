@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar"
 
 export default function SMNav() {
     return (
-        <div className='fixed top-0 py-2.5 left-0 right-0 z-50 bg-black'>
+        <div className='fixed top-0 py-2.5 left-0 right-0 bg-black'>
             <div className='text-primary flex shadow'>
                 <ul className='flex text-center font-medium'>
                     <li className='mr-6 text-base ml-3'>

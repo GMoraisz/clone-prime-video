@@ -11,7 +11,7 @@ export default function Help() {
     return (
 
 
-        <div className="bg-white mt-24 w-full h-full ">
+        <div className="bg-white mt-12 w-full h-full">
             <div>
                 <div className="border-b border-gray-300 bg-gray-100 py-3.5">
                     <h1 className="ml-3.5 font-bold text-lg lg:ml-14 lg:text-xl"> Ajuda </h1>
@@ -29,7 +29,7 @@ export default function Help() {
                 </div>
 
                 <div className="w-[400px] h-[225px]  ml-4 rounded border mt-6 lg:ml-40 lg:h-[314px] lg:w-[250px] lg:mr-1.5 lg:float-left">
-                    <ul className="grid gap-2 ml-2.5 mt-2 text-base font-medium ">
+                    <ul className="grid gap-2 ml-3 mt-6 text-base font-medium ">
 
                         <h2 className="text-lg font-bold"> Configurações</h2>
 
@@ -73,14 +73,54 @@ export default function Help() {
                     <a href="https://www.primevideo.com/help?nodeId=G3BQ95AL4WZLV9ZG" target="_blank">
                         <h2 className="font-bold text-lg "> Precisa cancelar a assinatura de um canal do Prime Video?</h2>
                     </a>
-                    <p className="font-normal mt-1 text-base">
+                    <p className="font-normal mt-1 text-base lg:text-lg">
                         Descubra como cancelar facilmente a assinatura de um canal do Prime Video online.
                     </p>
                 </div>
             </div>
 
             <div className="w-[400px] h-[225px] mt-6 rounded-md border ml-3 lg:float-left lg:w-[419.5px] lg:h-[314px]">
+                <ul className="grid gap-4 ml-4 text-base font-medium mt-6 ">
 
+                    <h2 className="text-xl font-bold"> Artigos populares</h2>
+
+                    <a href="https://www.primevideo.com/help?nodeId=GAEJPJ8E5TY8TTNL" target="_blank">
+                        <li className="text-blue-500">
+                            Cancele uma compra feita por engano
+                        </li>
+                    </a>
+                    <a href="https://www.primevideo.com/help?nodeId=GENY3HHV8GU34P3K" target="_blank">
+                        <li className="text-blue-500">
+                            Cobranças desconhecidas no Prime Video
+                        </li>
+                    </a>
+
+                    <a href="https://www.primevideo.com/help?nodeId=GQDJBTL3CFLLKPBV" target="_blank">
+                        <li className="text-blue-500">
+                            Instale o Prime Video em seus dispositivos
+                        </li>
+                    </a>
+
+                    <a href="https://www.primevideo.com/help?nodeId=TMwh2aig8aCv0WgwDL" target="_blank">
+                        <li className="text-blue-500">
+                            O que é a opção sem anúncios do Prime...
+                        </li>
+                    </a>
+
+                    <a href="https://www.primevideo.com/help?nodeId=GU85HKX66NVFNQ9Y" target="_blank">
+                        <li className="text-blue-500">
+                            Problemas com a reprodução de títulos d...
+                        </li>
+                    </a>
+
+                    <a href="https://www.primevideo.com/help?nodeId=GDSGFYXXPCSAGVTH" target="_blank">
+                        <li className="text-blue-500">
+
+                            Como faço para transmitir o Prime Video...
+                        </li>
+                    </a>
+
+                </ul>
             </div>
 
         </div>
