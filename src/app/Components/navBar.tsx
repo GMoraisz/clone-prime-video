@@ -151,7 +151,7 @@ const Header: React.FC = () => {
                     <AvatarFallback>Perfil</AvatarFallback>
                 </Avatar>
             </div>
-            <InicioDropdown />
+            <InicioDropdown /> 
             <LojaDropdown />
             <MinhaAreaDropdown />
         </header>
