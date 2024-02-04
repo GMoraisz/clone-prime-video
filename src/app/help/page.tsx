@@ -19,16 +19,16 @@ export default function Help() {
 
 
                 <div className=" mt-3">
-                    <h1 className="text-xl font-bold text-start"> Suporte do Prime Video</h1>
+                    <h1 className="text-xl font-bold text-start pl-1.5"> Suporte do Prime Video</h1>
                     <div className="relative">
-                        <input className="mt-3 border border-gray-300 rounded w-[350px] h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
+                        <input className="mt-3 border border-gray-300 rounded w-full h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
                         <IoSearch className="size-6 absolute left-2 top-1/2 transform -translate-y-1/2 text-xl" />
                     </div>
 
 
                 </div>
 
-                <div className="w-full h-[225px] rounded border mt-6 lg:h-[314px] lg:w-[250px] ">
+                <div className="w-full h-[250px] rounded border mt-6 lg:h-[314px] lg:w-[250px] ">
                     <ul className="grid gap-2 ml-3 mt-6 text-base font-medium ">
 
                         <h2 className="text-lg font-bold"> Configurações</h2>
@@ -60,7 +60,7 @@ export default function Help() {
                     </ul>
                 </div>
             </div>
-            <div className="w-[350px] lg:w-[650px] mt-6 rounded border ">
+            <div className="w-full lg:w-[650px] mt-6 rounded border ">
                 <div className='flex justify-center items-center mt-16 text-center'>
                     <Image
                         src="/images/primevideohelp.png"
@@ -73,13 +73,13 @@ export default function Help() {
                     <Link href="https://www.primevideo.com/help?nodeId=G3BQ95AL4WZLV9ZG" target="_blank">
                         <h2 className="font-bold text-lg "> Precisa cancelar a assinatura de um canal do Prime Video?</h2>
                     </Link>
-                    <p className="font-normal mt-1 text-base lg:text-lg">
+                    <p className="font-normal mt-2.5 text-base lg:text-lg">
                         Descubra como cancelar facilmente a assinatura de um canal do Prime Video online.
                     </p>
                 </div>
             </div>
 
-            <div className="w-[350px] h-[325px] mt-6 rounded-md border  lg:w-[419.5px] lg:h-[314px]">
+            <div className="w-full h-[325px] mt-6 rounded-md border  lg:w-[419.5px] lg:h-[314px]">
                 <ul className="grid gap-4 ml-4 text-sm lg:text-base font-medium mt-6 ">
 
                     <h2 className="text-xl font-bold"> Artigos populares</h2>
