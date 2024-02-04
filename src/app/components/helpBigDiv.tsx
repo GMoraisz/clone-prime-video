@@ -4,8 +4,9 @@
 export default function BigDiv() {
     return (
         <div
+
             className="mt-3 text-base mb-2">
-            <ul className="grid mt-2 lg:text-2xl font-semibold text-lg font-semibold">
+            <ul className="grid mt-2 lg:text-2xl font-semibold text-lg ">
                 <li >
                     <button className="w-full border py-2 text-start pl-2">
                         Configurações do Prime Video

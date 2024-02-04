@@ -13,6 +13,8 @@ export default function Help() {
 
 
         <div className="bg-white mt-12 justify-center items-center m-3 grid ">
+            <div className='bg-slate-100 font-bold text-lg h-[40px] py-2 border'> <h1> Ajuda </h1>
+            </div>
 
             <div>
 
@@ -80,7 +82,7 @@ export default function Help() {
                     </div>
                 </div>
 
-                <div className="w-full h-[325px] mt-6 rounded-md border  lg:w-[419.5px] lg:h-[330px] lg:float-left">
+                <div className="w-full h-full mt-6 rounded-md border  lg:w-[419.5px] lg:h-[330px] lg:float-left">
                     <ul className="grid gap-4 ml-4 text-sm lg:text-base font-medium mt-6 ">
 
                         <h2 className="text-xl font-bold"> Artigos populares</h2>
@@ -127,6 +129,17 @@ export default function Help() {
 
             <div className=' lg:mt-4 mt-1 '>
                 <BigDiv />
+            </div>
+            <div>
+                <div className=" mt-3 bg-slate-100 h-full">
+                    <div className="relative">
+                        <input className="mt-3 border border-gray-300 rounded w-full h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
+                        <IoSearch className="size-6 absolute left-2 top-1/2 transform -translate-y-1/2 text-xl" />
+
+                    </div>
+                    <button className='font-medium text-white bg-hover text-sm py-3.5 rounded pl-5 w-[260px] text-start mt-6'> Fale conosco </button>
+                </div>
+
             </div>
         </div>
 
