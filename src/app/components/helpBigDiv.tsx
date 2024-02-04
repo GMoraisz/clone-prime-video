@@ -4,70 +4,102 @@
 export default function BigDiv() {
     return (
         <div
-            className="mt-3 border border-gray-300 bg-stone-100 w-[330px] h-[800px] lg:w-[1350px] lg:h-[750px] text-base mb-2 pl-10 pr-2">
-            <ul className="grid  gap-4 mt-2 lg:text-xl font-semibold">
+            className="mt-3 text-base mb-2">
+            <ul className="grid mt-2 lg:text-xl font-semibold ">
                 <li >
-                    Configurações do Prime Video
-                </li>   
-                
-                <li>
-                    Opções sem anúncios do Prime Video
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Configurações do Prime Video
+                    </button>
                 </li>
 
                 <li>
-                    Cancelar
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Opções sem anúncios do Prime Video
+                    </button>
                 </li>
 
                 <li>
-                    Restrições e controles dos pais
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Cancelar
+                    </button>
                 </li>
 
                 <li>
-                    Reclamação e conformidade do conteúdo
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Restrições e controles dos pais
+                    </button>
                 </li>
 
                 <li>
-                    Problemas com aluguel, compra e pagamento
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Reclamação e conformidade do conteúdo
+                    </button>
                 </li>
 
                 <li>
-                    Solução de problemas de eventos ao vivo
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Problemas com aluguel, compra e pagamento
+                    </button>
                 </li>
 
                 <li>
-                    Problemas de reprodução e suporte
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Solução de problemas de eventos ao vivo
+                    </button>
                 </li>
 
                 <li>
-                    Acessibilidade
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Problemas de reprodução e suporte
+                    </button>
                 </li>
 
                 <li>
-                    Faixas de aúdio do Prime Video
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Acessibilidade
+                    </button>
                 </li>
 
                 <li>
-                    Legendas
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Faixas de aúdio do Prime Video
+                    </button>
                 </li>
 
                 <li>
-                    Watch Party do Prime Video
+                    <button className="w-[350px] border py-2 text-start pl-2">
+                        Legendas
+                    </button>
                 </li>
 
                 <li>
-                    Perfis
+                    <button className="w-full border py-2 text-start pl-2">
+                        Watch Party do Prime Video
+                    </button>
                 </li>
 
                 <li>
-                    Prime Video Channels
+                    <button className="w-full border py-2 text-start pl-2">
+                        Perfis
+                    </button>
                 </li>
 
                 <li>
-                    Dispositivos compatíveis
+                    <button className="w-full border py-2 text-start pl-2">
+                        Prime Video Channels
+                    </button>
                 </li>
 
                 <li>
-                    Políticas legais, avisos e relatórios
+                    <button className="w-full border py-2 text-start pl-2">
+                        Dispositivos compatíveis
+                    </button>
+                </li>
+
+                <li>
+                    <button className="w-full border py-2 text-start pl-2">
+                        Políticas legais, avisos e relatórios
+                    </button>
                 </li>
 
             </ul>

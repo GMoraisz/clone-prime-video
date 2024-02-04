@@ -12,7 +12,7 @@ export default function Help() {
     return (
 
 
-        <div className="bg-white mt-12 w-full h-full items-center justify-center grid">
+        <div className="bg-white mt-12 w-full h-full justify-center items-center grid ">
 
             <div>
 
@@ -21,14 +21,14 @@ export default function Help() {
                 <div className=" mt-3">
                     <h1 className="text-xl font-bold text-start"> Suporte do Prime Video</h1>
                     <div className="relative">
-                        <input className="mt-3 border border-gray-300 rounded w-[330px] h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
+                        <input className="mt-3 border border-gray-300 rounded w-[350px] h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
                         <IoSearch className="size-6 absolute left-2 top-1/2 transform -translate-y-1/2 text-xl" />
                     </div>
 
 
                 </div>
 
-                <div className="w-[330px] h-[225px] rounded border mt-6 lg:h-[314px] lg:w-[250px] ">
+                <div className="w-full h-[225px] rounded border mt-6 lg:h-[314px] lg:w-[250px] ">
                     <ul className="grid gap-2 ml-3 mt-6 text-base font-medium ">
 
                         <h2 className="text-lg font-bold"> Configurações</h2>
@@ -60,7 +60,7 @@ export default function Help() {
                     </ul>
                 </div>
             </div>
-            <div className="w-[330px] h-full lg:w-[650px] mt-6 rounded border ">
+            <div className="w-[350px] lg:w-[650px] mt-6 rounded border ">
                 <div className='flex justify-center items-center mt-16 text-center'>
                     <Image
                         src="/images/primevideohelp.png"
@@ -69,7 +69,7 @@ export default function Help() {
                         alt="Amazon Logo"
                     />
                 </div>
-                <div className="bg-zinc-100 h-[150px] mt-14 rounded py-2 pl-2">
+                <div className="bg-zinc-100 h-[150px] mt-12 rounded py-2.5 pl-2">
                     <Link href="https://www.primevideo.com/help?nodeId=G3BQ95AL4WZLV9ZG" target="_blank">
                         <h2 className="font-bold text-lg "> Precisa cancelar a assinatura de um canal do Prime Video?</h2>
                     </Link>
@@ -79,7 +79,7 @@ export default function Help() {
                 </div>
             </div>
 
-            <div className="w-[330px] h-[325px] mt-6 rounded-md border  lg:w-[419.5px] lg:h-[314px]">
+            <div className="w-[350px] h-[325px] mt-6 rounded-md border  lg:w-[419.5px] lg:h-[314px]">
                 <ul className="grid gap-4 ml-4 text-sm lg:text-base font-medium mt-6 ">
 
                     <h2 className="text-xl font-bold"> Artigos populares</h2>
