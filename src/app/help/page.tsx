@@ -28,100 +28,103 @@ export default function Help() {
 
                 </div>
 
-                <div className="w-full h-[250px] rounded border mt-6 lg:h-[314px] lg:w-[250px] ">
-                    <ul className="grid gap-2 ml-3 mt-6 text-base font-medium ">
+                <div>
+                    <div className="w-full h-[250px] rounded border mt-6 lg:h-[314px] lg:w-[250px] ">
+                        <ul className="grid gap-2 ml-3 mt-6 text-base font-medium ">
 
-                        <h2 className="text-lg font-bold"> Configurações</h2>
+                            <h2 className="text-lg font-bold"> Configurações</h2>
 
-                        <Link href="https://www.primevideo.com/region/na/settings?ref_=atv_auth_red_aft" target="_blank">
-                            <li> <FaGear className={`inline-block mr-1.5 size-5`} />
-                                Detalhes da conta</li>
+                            <Link href="https://www.primevideo.com/region/na/settings?ref_=atv_auth_red_aft" target="_blank">
+                                <li> <FaGear className={`inline-block mr-1.5 size-5`} />
+                                    Detalhes da conta</li>
+                            </Link>
+                            <Link href="https://www.primevideo.com/region/na/ontv/code?ref_=atv_auth_red_aft" target="_blank">
+                                <li> <TiDeviceDesktop className={`inline-block mr-1.5 size-5`} />
+                                    Registrar um dispositivo</li>
+                            </Link>
+
+                            <Link href="https://www.primevideo.com/region/na/settings/parental-controls?ref_=atv_auth_red_aft" target="_blank">
+                                <li> <HiUsers className={`inline-block mr-1.5 size-6`} />
+                                    Controle dos pais</li>
+                            </Link>
+
+                            <Link href="https://www.primevideo.com/region/na/settings/watch-history?ref_=atv_auth_red_aft" target="_blank">
+                                <li> <IoMdClock className={`inline-block mr-1.5 size-6`} />
+                                    Histórico de exibição </li>
+                            </Link>
+
+                            <Link href="https://www.primevideo.com/profiles" target="_blank">
+                                <li>  <HiUser className={`inline-block mr-1.5 size-6`} />
+                                    Perfis do Prime Video</li>
+                            </Link>
+
+                        </ul>
+                    </div>
+                </div>
+                <div className="w-full lg:w-[650px] mt-6 rounded border ">
+                    <div className='flex justify-center items-center mt-16 text-center'>
+                        <Image
+                            src="/images/primevideohelp.png"
+                            width={215}
+                            height={250}
+                            alt="Amazon Logo"
+                        />
+                    </div>
+                    <div className="bg-zinc-100 h-[150px] mt-12 rounded py-2.5 pl-2">
+                        <Link href="https://www.primevideo.com/help?nodeId=G3BQ95AL4WZLV9ZG" target="_blank">
+                            <h2 className="font-bold text-lg "> Precisa cancelar a assinatura de um canal do Prime Video?</h2>
                         </Link>
-                        <Link href="https://www.primevideo.com/region/na/ontv/code?ref_=atv_auth_red_aft" target="_blank">
-                            <li> <TiDeviceDesktop className={`inline-block mr-1.5 size-5`} />
-                                Registrar um dispositivo</li>
+                        <p className="font-normal mt-2.5 text-base lg:text-lg">
+                            Descubra como cancelar facilmente a assinatura de um canal do Prime Video online.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="w-full h-[325px] mt-6 rounded-md border  lg:w-[419.5px] lg:h-[314px]">
+                    <ul className="grid gap-4 ml-4 text-sm lg:text-base font-medium mt-6 ">
+
+                        <h2 className="text-xl font-bold"> Artigos populares</h2>
+
+                        <Link href="https://www.primevideo.com/help?nodeId=GAEJPJ8E5TY8TTNL" target="_blank">
+                            <li className="text-blue-500">
+                                Cancele uma compra feita por engano
+                            </li>
+                        </Link>
+                        <Link href="https://www.primevideo.com/help?nodeId=GENY3HHV8GU34P3K" target="_blank">
+                            <li className="text-blue-500">
+                                Cobranças desconhecidas no Prime Video
+                            </li>
                         </Link>
 
-                        <Link href="https://www.primevideo.com/region/na/settings/parental-controls?ref_=atv_auth_red_aft" target="_blank">
-                            <li> <HiUsers className={`inline-block mr-1.5 size-6`} />
-                                Controle dos pais</li>
+                        <Link href="https://www.primevideo.com/help?nodeId=GQDJBTL3CFLLKPBV" target="_blank">
+                            <li className="text-blue-500">
+                                Instale o Prime Video em seus dispositivos
+                            </li>
                         </Link>
 
-                        <Link href="https://www.primevideo.com/region/na/settings/watch-history?ref_=atv_auth_red_aft" target="_blank">
-                            <li> <IoMdClock className={`inline-block mr-1.5 size-6`} />
-                                Histórico de exibição </li>
+                        <Link href="https://www.primevideo.com/help?nodeId=TMwh2aig8aCv0WgwDL" target="_blank">
+                            <li className="text-blue-500">
+                                O que é a opção sem anúncios do Prime...
+                            </li>
                         </Link>
 
-                        <Link href="https://www.primevideo.com/profiles" target="_blank">
-                            <li>  <HiUser className={`inline-block mr-1.5 size-6`} />
-                                Perfis do Prime Video</li>
+                        <Link href="https://www.primevideo.com/help?nodeId=GU85HKX66NVFNQ9Y" target="_blank">
+                            <li className="text-blue-500">
+                                Problemas com a reprodução de títulos d...
+                            </li>
+                        </Link>
+
+                        <Link href="https://www.primevideo.com/help?nodeId=GDSGFYXXPCSAGVTH" target="_blank">
+                            <li className="text-blue-500">
+
+                                Como faço para transmitir o Prime Video...
+                            </li>
                         </Link>
 
                     </ul>
                 </div>
             </div>
-            <div className="w-full lg:w-[650px] mt-6 rounded border ">
-                <div className='flex justify-center items-center mt-16 text-center'>
-                    <Image
-                        src="/images/primevideohelp.png"
-                        width={215}
-                        height={250}
-                        alt="Amazon Logo"
-                    />
-                </div>
-                <div className="bg-zinc-100 h-[150px] mt-12 rounded py-2.5 pl-2">
-                    <Link href="https://www.primevideo.com/help?nodeId=G3BQ95AL4WZLV9ZG" target="_blank">
-                        <h2 className="font-bold text-lg "> Precisa cancelar a assinatura de um canal do Prime Video?</h2>
-                    </Link>
-                    <p className="font-normal mt-2.5 text-base lg:text-lg">
-                        Descubra como cancelar facilmente a assinatura de um canal do Prime Video online.
-                    </p>
-                </div>
-            </div>
 
-            <div className="w-full h-[325px] mt-6 rounded-md border  lg:w-[419.5px] lg:h-[314px]">
-                <ul className="grid gap-4 ml-4 text-sm lg:text-base font-medium mt-6 ">
-
-                    <h2 className="text-xl font-bold"> Artigos populares</h2>
-
-                    <Link href="https://www.primevideo.com/help?nodeId=GAEJPJ8E5TY8TTNL" target="_blank">
-                        <li className="text-blue-500">
-                            Cancele uma compra feita por engano
-                        </li>
-                    </Link>
-                    <Link href="https://www.primevideo.com/help?nodeId=GENY3HHV8GU34P3K" target="_blank">
-                        <li className="text-blue-500">
-                            Cobranças desconhecidas no Prime Video
-                        </li>
-                    </Link>
-
-                    <Link href="https://www.primevideo.com/help?nodeId=GQDJBTL3CFLLKPBV" target="_blank">
-                        <li className="text-blue-500">
-                            Instale o Prime Video em seus dispositivos
-                        </li>
-                    </Link>
-
-                    <Link href="https://www.primevideo.com/help?nodeId=TMwh2aig8aCv0WgwDL" target="_blank">
-                        <li className="text-blue-500">
-                            O que é a opção sem anúncios do Prime...
-                        </li>
-                    </Link>
-
-                    <Link href="https://www.primevideo.com/help?nodeId=GU85HKX66NVFNQ9Y" target="_blank">
-                        <li className="text-blue-500">
-                            Problemas com a reprodução de títulos d...
-                        </li>
-                    </Link>
-
-                    <Link href="https://www.primevideo.com/help?nodeId=GDSGFYXXPCSAGVTH" target="_blank">
-                        <li className="text-blue-500">
-
-                            Como faço para transmitir o Prime Video...
-                        </li>
-                    </Link>
-
-                </ul>
-            </div>
             <div className=' lg:mt-4 mt-1 '>
                 <BigDiv />
             </div>
