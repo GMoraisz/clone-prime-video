@@ -12,7 +12,7 @@ export default function Help() {
     return (
 
 
-        <div className="bg-white mt-12 justify-center grid ">
+        <div className="bg-white mt-12 justify-center grid">
             <div className='bg-slate-100 font-bold text-lg h-[60px] py-4 pl-2.5 border'> <h1> Ajuda </h1>
             </div>
 
@@ -20,7 +20,7 @@ export default function Help() {
 
 
 
-                <div className=" mt-3 m-3">
+                <div className=" mt-3 m-3 lg:m-0">
                     <h1 className="text-xl font-bold text-start pl-1.5 lg:text-2xl"> Suporte do Prime Video</h1>
                     <div className="relative">
                         <input className="mt-3 border border-gray-300 rounded-sm w-full h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
@@ -30,8 +30,8 @@ export default function Help() {
 
                 </div>
 
-                <div className='m-3'>
-                    <div className="w-full h-[250px] rounded-sm border mt-6 lg:h-[330px] lg:w-[250px] lg:float-left lg:mr-3.5">
+                <div className='m-3 lg:m-0'>
+                    <div className="w-full h-[250px] rounded-sm border mt-6 lg:h-[322.5px] lg:w-[250px] lg:float-left lg:mr-2.5">
                         <ul className="grid gap-2 ml-2 mt-6 text-base font-medium">
 
                             <h2 className="text-lg font-bold"> Configurações</h2>
@@ -63,13 +63,14 @@ export default function Help() {
                         </ul>
                     </div>
                 </div>
-                <div className="m-3 lg:w-[650px] mt-6 rounded-sm border lg:float-left lg:mr-3.5">
+                <div className="m-3 lg:m-0 lg:w-[650px] mt-6 rounded-sm border lg:float-left lg:mr-2.5 lg:mt-6">
                     <div className='flex justify-center items-center mt-14 text-center '>
-                        <Image
+                        <Image className='lg:w-[215px]'
                             src="/images/primevideohelp.png"
                             width={170}
                             height={170}
                             alt="Amazon Logo"
+
                         />
                     </div>
                     <div className="bg-zinc-100 h-[150px] mt-12 rounded-sm py-2.5 pl-4">
@@ -82,8 +83,8 @@ export default function Help() {
                     </div>
                 </div>
 
-                <div className="h-[325px] mt-6 rounded-sm border  lg:w-[419.5px] lg:h-[330px] lg:float-left m-3">
-                    <ul className="grid gap-4 ml-2 text-sm lg:text-base font-medium mt-6">
+                <div className="h-[325px] mt-6 rounded-sm border  lg:w-[430px] lg:h-[322px] lg:float-left m-3 lg:m-0 lg:mt-6">
+                    <ul className="grid gap-4 ml-2 text-sm lg:text-base font-medium mt-6 ">
 
                         <h2 className="text-lg font-bold"> Artigos populares</h2>
 
@@ -119,7 +120,7 @@ export default function Help() {
                         <Link href="https://www.primevideo.com/help?nodeId=GDSGFYXXPCSAGVTH" target="_blank">
                             <li className="text-blue-500 truncate">
 
-                            Como faço para transmitir o Prime Video na TV?
+                                Como faço para transmitir o Prime Video na TV?
                             </li>
                         </Link>
 
@@ -127,7 +128,7 @@ export default function Help() {
                 </div>
             </div>
 
-            <div className=' lg:mt-4 mt-1 m-3'>
+            <div className=' lg:mt-4 mt-1 m-3 lg:m-0'>
                 <BigDiv />
             </div>
             <div>
