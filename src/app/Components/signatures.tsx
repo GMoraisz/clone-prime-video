@@ -33,10 +33,10 @@ const SignaturesList: React.FC = () => {
     const transitionDuration = 0.4;
 
     return (
-        <div className={`max-w-[800px] h-[200px] w-full m-auto relative overflow-hidden lg:h-[305px] text-center `}>
-            <h1 className='text-tertiary text-2xl shadow-black font-semibold'> Minhas assinaturas </h1>
+        <div className={`max-w-[800px] h-[200px] m-6 relative overflow-hidden lg:h-[305px] lg:m-auto text-center`}>
+            <h1 className='text-tertiary text-2xl shadow-black font-semibold row-span-1'> Minhas assinaturas </h1>
           
-            <div className="h-full flex gap-4 overflow-hidden mt-1.5">
+            <div className="h-full flex mt-2 gap-4 overflow-hidden row-span-2">
                 {slides.slice(currentIndex, currentIndex + imagesPerSlide).map((slide, index) => (
                     <div
                         key={index}

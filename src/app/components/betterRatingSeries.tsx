@@ -30,10 +30,9 @@ const SeriesList: React.FC = () => {
         setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
     };
 
-    const transitionDuration = 0.5; // Defina a duração da transição em segundos
-
+    const transitionDuration = 0.5; 
     return (
-        <div className={`max-w-[1175px] h-[200px] lg:h-[680px]   w-full m-auto relative`}>
+        <div className={`max-w-[1175px] h-[200px] lg:h-[680px]  m-6 lg:m-auto relative`}>
             <div className='ml-6 flex shadow-black mb-2 text-xl font-semibold'>
                 <h1 className='text-blue-500 mr-5'> Prime </h1>
                 <span className='text-primary '> Séries com as melhores notas no IMDb</span>

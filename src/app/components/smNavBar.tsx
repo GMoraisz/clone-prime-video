@@ -41,7 +41,7 @@ export default function SMNav() {
                             {isMenuOpen ? (
                                 <div className='grid gap-2'>
                                     <DropdownLink href="/home" text="Início" icon={<GoHome className='inline-block mr-1' />} />
-                                    <DropdownLink href="/" text="Loja" icon={<RiShoppingBagLine className='inline-block mr-1' />} />
+                                    <DropdownLink href="/store" text="Loja" icon={<RiShoppingBagLine className='inline-block mr-1' />} />
                                     <DropdownLink href="/live" text="TV ao vivo" icon={<PiTelevisionSimpleLight className='inline-block mr-1' />} />
                                     <DropdownLink href="/" text="Categorias" icon={<LiaThListSolid className='inline-block mr-1' />} />
                                     <DropdownLink href="/" text="Minha área" icon={<PiVideo className='inline-block mr-1' />} />
