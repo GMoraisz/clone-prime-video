@@ -132,13 +132,15 @@ export default function Help() {
                 <BigDiv />
             </div>
             <div>
-                <div className=" mt-3 bg-slate-100 h-full grid justify-center ">
+                <div className=" mt-3 bg-slate-100 h-full grid justify-center lg:grid-cols-2 ">
                     <div className="relative">
-                        <input className="mt-3 border border-gray-300 rounded-sm w-full h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
+                        <input className="mt-3 border border-gray-300 rounded-md w-full h-[47px] lg:w-[275px] lg:h-[54px] text-base mb-2 pl-10 pr-2 
+                        lg:mt-5" 
+                        placeholder="Pesquisar na Ajuda" />
                         <IoSearch className="size-6 absolute left-2 top-1/2 transform -translate-y-1/2 text-xl" />
 
                     </div>
-                    <button className='font-medium text-white bg-hover text-sm py-3.5 rounded-sm pl-5 w-[260px] text-start mt-6'> Fale conosco </button>
+                    <button className='font-medium text-white bg-hover text-sm py-3.5 rounded-md pl-5 w-[260px] lg:w-[160px] lg:h-[55px] lg:text-lg text-start mt-6'> Fale conosco </button>
                 </div>
 
             </div>
