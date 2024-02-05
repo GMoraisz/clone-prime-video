@@ -12,7 +12,7 @@ export default function Help() {
     return (
 
 
-        <div className="bg-white mt-12 justify-center grid lg:gap-5">
+        <div className="bg-white mt-12 justify-center grid lg:gap-5 lg:max-h-screen">
             <div className='bg-slate-100 font-bold text-lg h-[60px] py-4 pl-2.5 border lg:text-xl'> <h1> Ajuda </h1>
             </div>
 

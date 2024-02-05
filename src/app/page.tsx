@@ -6,7 +6,7 @@ import SignaturesList from "../app/components/signatures";
 
 export default function Home() {
     return (
-        <div>
+        <div className="lg:h-[175vh]">
 
             <main>
                 <div className="mt-4">
