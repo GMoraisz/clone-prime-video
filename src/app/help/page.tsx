@@ -12,27 +12,27 @@ export default function Help() {
     return (
 
 
-        <div className="bg-white mt-12 justify-center items-center m-3 grid ">
-            <div className='bg-slate-100 font-bold text-lg h-[40px] py-2 border'> <h1> Ajuda </h1>
+        <div className="bg-white mt-12 justify-center grid ">
+            <div className='bg-slate-100 font-bold text-lg h-[60px] py-4 pl-2.5 border'> <h1> Ajuda </h1>
             </div>
 
             <div>
 
 
 
-                <div className=" mt-3">
+                <div className=" mt-3 m-3">
                     <h1 className="text-xl font-bold text-start pl-1.5 lg:text-2xl"> Suporte do Prime Video</h1>
                     <div className="relative">
-                        <input className="mt-3 border border-gray-300 rounded w-full h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
+                        <input className="mt-3 border border-gray-300 rounded-sm w-full h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
                         <IoSearch className="size-6 absolute left-2 top-1/2 transform -translate-y-1/2 text-xl" />
                     </div>
 
 
                 </div>
 
-                <div>
-                    <div className="w-full h-[250px] rounded border mt-6 lg:h-[330px] lg:w-[250px] lg:float-left lg:mr-3.5">
-                        <ul className="grid gap-2 ml-3 mt-6 text-base font-medium">
+                <div className='m-3'>
+                    <div className="w-full h-[250px] rounded-sm border mt-6 lg:h-[330px] lg:w-[250px] lg:float-left lg:mr-3.5">
+                        <ul className="grid gap-2 ml-2 mt-6 text-base font-medium">
 
                             <h2 className="text-lg font-bold"> Configurações</h2>
 
@@ -63,16 +63,16 @@ export default function Help() {
                         </ul>
                     </div>
                 </div>
-                <div className="w-full lg:w-[650px] mt-6 rounded border lg:float-left lg:mr-3.5">
-                    <div className='flex justify-center items-center mt-16 text-center'>
+                <div className="m-3 lg:w-[650px] mt-6 rounded-sm border lg:float-left lg:mr-3.5">
+                    <div className='flex justify-center items-center mt-14 text-center '>
                         <Image
                             src="/images/primevideohelp.png"
-                            width={215}
-                            height={250}
+                            width={170}
+                            height={170}
                             alt="Amazon Logo"
                         />
                     </div>
-                    <div className="bg-zinc-100 h-[150px] mt-12 rounded py-2.5 pl-2">
+                    <div className="bg-zinc-100 h-[150px] mt-12 rounded-sm py-2.5 pl-4">
                         <Link href="https://www.primevideo.com/help?nodeId=G3BQ95AL4WZLV9ZG" target="_blank">
                             <h2 className="font-bold text-lg "> Precisa cancelar a assinatura de um canal do Prime Video?</h2>
                         </Link>
@@ -82,10 +82,10 @@ export default function Help() {
                     </div>
                 </div>
 
-                <div className="w-full h-full mt-6 rounded-md border  lg:w-[419.5px] lg:h-[330px] lg:float-left">
-                    <ul className="grid gap-4 ml-4 text-sm lg:text-base font-medium mt-6 ">
+                <div className="h-[325px] mt-6 rounded-sm border  lg:w-[419.5px] lg:h-[330px] lg:float-left m-3">
+                    <ul className="grid gap-4 ml-2 text-sm lg:text-base font-medium mt-6">
 
-                        <h2 className="text-xl font-bold"> Artigos populares</h2>
+                        <h2 className="text-lg font-bold"> Artigos populares</h2>
 
                         <Link href="https://www.primevideo.com/help?nodeId=GAEJPJ8E5TY8TTNL" target="_blank">
                             <li className="text-blue-500">
@@ -105,21 +105,21 @@ export default function Help() {
                         </Link>
 
                         <Link href="https://www.primevideo.com/help?nodeId=TMwh2aig8aCv0WgwDL" target="_blank">
-                            <li className="text-blue-500">
-                                O que é a opção sem anúncios do Prime...
+                            <li className="text-blue-500 truncate">
+                                O que é a opção sem anúncios do Prime Video?
                             </li>
                         </Link>
 
                         <Link href="https://www.primevideo.com/help?nodeId=GU85HKX66NVFNQ9Y" target="_blank">
-                            <li className="text-blue-500">
-                                Problemas com a reprodução de títulos d...
+                            <li className="text-blue-500 truncate">
+                                Problemas com a reprodução de títulos do Prime Video
                             </li>
                         </Link>
 
                         <Link href="https://www.primevideo.com/help?nodeId=GDSGFYXXPCSAGVTH" target="_blank">
-                            <li className="text-blue-500">
+                            <li className="text-blue-500 truncate">
 
-                                Como faço para transmitir o Prime Video...
+                            Como faço para transmitir o Prime Video na TV?
                             </li>
                         </Link>
 
@@ -127,17 +127,17 @@ export default function Help() {
                 </div>
             </div>
 
-            <div className=' lg:mt-4 mt-1 '>
+            <div className=' lg:mt-4 mt-1 m-3'>
                 <BigDiv />
             </div>
             <div>
-                <div className=" mt-3 bg-slate-100 h-full">
+                <div className=" mt-3 bg-slate-100 h-full grid justify-center ">
                     <div className="relative">
-                        <input className="mt-3 border border-gray-300 rounded w-full h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
+                        <input className="mt-3 border border-gray-300 rounded-sm w-full h-[47px] lg:w-[1350px] lg:h-[54px] text-base mb-2 pl-10 pr-2" placeholder="Pesquisar na Ajuda" />
                         <IoSearch className="size-6 absolute left-2 top-1/2 transform -translate-y-1/2 text-xl" />
 
                     </div>
-                    <button className='font-medium text-white bg-hover text-sm py-3.5 rounded pl-5 w-[260px] text-start mt-6'> Fale conosco </button>
+                    <button className='font-medium text-white bg-hover text-sm py-3.5 rounded-sm pl-5 w-[260px] text-start mt-6'> Fale conosco </button>
                 </div>
 
             </div>
