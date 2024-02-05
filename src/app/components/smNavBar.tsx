@@ -57,7 +57,7 @@ export default function SMNav() {
                     </li>
                     <li className='text-lg whitespace-nowrap font-semibold'>
                         <Link href={'/'}>
-                            <span>prime video</span>
+                            <h1>prime video</h1>
                         </Link>
                     </li>
                     <li className='ml-10'>
