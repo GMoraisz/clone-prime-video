@@ -7,7 +7,7 @@ import SignaturesList from "../components/signatures";
 export default function Main() {
     return (
 
-        <div>
+        <div className="bg-black">
 
             <main>
                 <div className="mt-4">

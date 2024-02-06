@@ -141,7 +141,7 @@ const Header: React.FC = () => {
             <div className={`bg-background items-center grid grid-flow-col fixed top-0 right-0 w-full shadow-md rounded-md py-2 text-nowrap`}>
                 {navLinkWithDropdown('Menu', '/home', false, '')}
                 {navLinkWithDropdown('prime video', '/home', true, 'font-semibold ')}
-                    <div className='flex mr-8'>
+                    <div className='flex'>
                     {navLinkWithDropdown('Search', '/', false, 'mr-2')}
                     <Avatar className='size-7 mt-1'>
                         <AvatarImage src="https://github.com/shadcn.png" />
