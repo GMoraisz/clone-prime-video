@@ -138,7 +138,7 @@ const Header: React.FC = () => {
 
     return (
         <header className="text-primary font-medium">
-            <div className={`bg-background items-center grid grid-flow-col fixed top-0 right-0 w-full shadow-md rounded-md py-3 text-nowrap`}>
+            <div className={`bg-background items-center grid grid-flow-col fixed top-0 right-0 w-full shadow-md rounded-md py-2 text-nowrap`}>
                 {navLinkWithDropdown('Menu', '/home', false, '')}
                 {navLinkWithDropdown('prime video', '/home', true, 'font-semibold ')}
                     <div className='flex mr-8'>
