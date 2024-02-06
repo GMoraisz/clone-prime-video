@@ -1,86 +1,157 @@
 "use client";
-import { useState, ReactNode } from 'react';
-import { HiOutlineSearch } from 'react-icons/hi';
-import { Avatar, AvatarFallback, AvatarImage } from '@/app/components/ui/avatar';
-import { GoHome } from "react-icons/go";
-import { RiShoppingBagLine } from "react-icons/ri";
-import { PiTelevisionSimpleLight, PiVideo } from "react-icons/pi";
-import { LiaThListSolid } from "react-icons/lia";
 import Link from 'next/link';
+import { useState } from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar"
+import { HiOutlineSearch } from "react-icons/hi";
+import { IoChevronDown } from "react-icons/io5";
 
 
 
-interface NavLinkProps {
-    href: string;
+
+interface DropdownLinkProps {
     text: string;
-    icon?: ReactNode;
+    href: string;
 }
 
-const DropdownLink: React.FC<NavLinkProps> = ({ href, text, icon }) => (
-    <div className="block pr-3.5 text-sm ml-4 py-2.5 text-secondary hover:bg-primary hover:text-black hover:w-full whitespace-nowrap">
-        <Link href={href}>
-            <span className="icon">{icon}</span>
-            <span className="text">{text}</span>
-        </Link>
+const DropdownLink: React.FC<DropdownLinkProps> = ({ text, href, }) => (
+    <Link href={href} className="block pr-3.5 text-base py-2.5 text-secondary hover:bg-primary hover:text-black hover:w-full whitespace-nowrap">
+        {text}
+
+    </Link>
+);
+
+const InicioDropdown: React.FC = () => (
+    <div className="hidden group-hover:block absolute bg-hover rounded-md text-center">
+        <DropdownLink text="Todos" href="/home" />
+        <DropdownLink text="Filmes" href="/mainCarousel" />
+        <DropdownLink text="Séries" href="/series" />
+        <DropdownLink text="Esportes" href="/live" />
     </div>
 );
 
-export default function SMNav() {
-    const [isMenuOpen, setMenuOpen] = useState(false);
+const LojaDropdown: React.FC = () => (
+    <div className="hidden group-hover:block absolute bg-hover rounded-md">
+        <DropdownLink text="Todos" href="/todos" />
+        <DropdownLink text="Alugar ou comprar" href="/alugar-comprar" />
+        <DropdownLink text="Canais" href="/canais" />
+    </div>
+);
 
-    const toggleMenu = () => {
-        setMenuOpen(!isMenuOpen);
+const MinhaAreaDropdown: React.FC = () => (
+    <div className="hidden group-hover:block absolute bg-hover rounded-md text-center">
+        <DropdownLink text="Todos" href="/todos" />
+        <DropdownLink text="Sua Lista" href="/sua-lista" />
+        <DropdownLink text="Compras e Aluguéis" href="/compras-alugueis" />
+    </div>
+);
+
+const PerfilDropdown: React.FC = () => (
+    <div className="hidden group-hover:block absolute bg-hover rounded-md text-center">
+        <h2 className='text-2xl mt-6 mb-4'> Sua conta</h2>
+        <DropdownLink text="Ajuda" href="/help" />
+        <DropdownLink text="Assista onde quiser" href="/sua-lista" />
+        <DropdownLink text="Conta e configurações" href="/compras-alugueis" />
+        <DropdownLink text="Benefícios Prime" href="/compras-alugueis" />
+
+
+        <h2 className='text-2xl mb-2 mt-4'> Perfis</h2>
+        <DropdownLink text="(+) Adicionar novo perfil" href="/todos" />
+        <DropdownLink text="Editar perfis" href="/sua-lista" />
+        <DropdownLink text="Saiba mais" href="/compras-alugueis" />
+
+    </div>
+
+);
+
+const CategoriasDropdown: React.FC = () => (
+    <div className="hidden group-hover:block absolute bg-hover rounded-md text-center">
+        <div>
+            <h2 className="text-2xl mt-3.5 mb-2">Gêneros</h2>
+            <DropdownLink text="Ação e aventura" href="/" />
+            <DropdownLink text="Anime" href="/anime" />
+            <DropdownLink text="Comédia" href="/" />
+            <DropdownLink text="Documentário" href="/" />
+            <DropdownLink text="Drama" href="/" />
+            <DropdownLink text="Fantasia" href="/" />
+            <DropdownLink text="Terror" href="/" />
+        </div>
+        <div>
+            <h2 className="text-2xl mb-2">Coleções em destaque</h2>
+            <DropdownLink text="Esportes" href="/" />
+            <DropdownLink text="Vozes negras" href="/" />
+            <DropdownLink text="LGBTQIAP+" href="/" />
+            <DropdownLink text="Lançamentos Direto do Cinema" href="/" />
+            <DropdownLink text="Aproveite episódios gratuitos" href="/" />
+        </div>
+    </div>
+);
+
+
+const Header: React.FC = () => {
+    const [searchHovered, setSearchHovered] = useState(false);
+    const [chevronRotated, setChevronRotated] = useState<boolean>(false);
+    const [dropdownHovered, setDropdownHovered] = useState<boolean>(false);
+
+    const navLinkWithDropdown = (text: string, href: string, excludeDropdown = false, marginRight: string = 'mr-5') => {
+        const [hovered, setHovered] = useState(false);
+
+        return (
+            <div
+                className={`relative group ${text === 'prime video' ? `mr-${marginRight}` : ''}`}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => {
+                    if (!dropdownHovered) {
+                        setHovered(false);
+                    }
+                }}
+            >
+                <Link href={href} className={`pr-3 pl-3 pt-2.5 pb-2.5 ${excludeDropdown ? '' : hovered ? 'hover:bg-hover linkHover' : ''} ${marginRight}`}>
+                    {text === 'Search' ? (
+                        <HiOutlineSearch className={`inline-block mr-2 text-3xl mt-1 text-secondary`} />
+                    ) : (
+                        <>
+                            {text === 'Menu' || text === 'Loja' || text === 'Categorias' || text === 'Minha área' ? (
+                                <>
+                                    {text}
+                                    <IoChevronDown
+                                        className={`inline-block ml-1 chevronIcon transition-transform ${hovered ? 'rotate-180' : ''}`}
+                                    />
+                                </>
+                            ) : (
+                                text
+                            )}
+                        </>
+                    )}
+                </Link>
+                {!excludeDropdown && (
+                    <>
+                        {text === 'Menu' && <InicioDropdown />}
+                        {text === 'Loja' && <LojaDropdown />}
+                        {text === 'Minha área' && <MinhaAreaDropdown />}
+                        {text === 'User' && <PerfilDropdown />}
+                        {text === 'Categorias' && <CategoriasDropdown />}
+                    </>
+                )}
+            </div>
+        );
     };
 
     return (
-        <div className="fixed top-0 py-2.5 left-0 right-0 bg-black">
-            <div className="text-primary flex shadow">
-                <ul className={`text-center font-medium grid ${isMenuOpen ? 'grid-cols-1' : 'grid-cols-4'} gap-16   `}>
-                    <li className="ml-2 text-base cursor-pointer relative text-start">
-                        <span onClick={toggleMenu}>
-                            {isMenuOpen ? (
-                                <div className='grid gap-2'>
-                                    <DropdownLink href="/home" text="Início" icon={<GoHome className='inline-block mr-1' />} />
-                                    <DropdownLink href="/store" text="Loja" icon={<RiShoppingBagLine className='inline-block mr-1' />} />
-                                    <DropdownLink href="/live" text="TV ao vivo" icon={<PiTelevisionSimpleLight className='inline-block mr-1' />} />
-                                    <DropdownLink href="/" text="Categorias" icon={<LiaThListSolid className='inline-block mr-1' />} />
-                                    <DropdownLink href="/" text="Minha área" icon={<PiVideo className='inline-block mr-1' />} />
-
-                                </div>
-                            ) : (
-                                <span>Menu</span>
-                            )}
-                            {isMenuOpen && (
-                                <div className="absolute left-0 bottom-full">
-                                    <DropdownLink href="/home" text="Todos" />
-                                    <DropdownLink href="/mainCarousel" text="Filmes" />
-                                    <DropdownLink href="/series" text="Séries" />
-                                    <DropdownLink href="/live" text="Esportes" />
-                                </div>
-                            )}
-                        </span>
-                    </li>
-
-                    <li className='text-lg whitespace-nowrap font-semibold'>
-                        <Link href={'/'}>
-                            <h1>prime video</h1>
-                        </Link>
-                    </li>
-                    <li className='ml-12'>
-                        <Link href={'/'}>
-                            <HiOutlineSearch className='size-7 text-secondary' />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href={'/'}>
-                            <Avatar className='size-6'>
-                                <AvatarImage src="https://github.com/shadcn.png" />
-                                <AvatarFallback>Perfil</AvatarFallback>
-                            </Avatar>
-                        </Link>
-                    </li>
-                </ul>
+        <header className="text-primary font-medium">
+            <div className={`bg-background items-center grid grid-flow-col fixed top-0 right-0 w-full shadow-md rounded-md py-3 text-nowrap`}>
+                {navLinkWithDropdown('Menu', '/home', false, '')}
+                {navLinkWithDropdown('prime video', '/home', true, 'font-semibold ')}
+                    <div className='flex mr-8'>
+                    {navLinkWithDropdown('Search', '/', false, 'mr-2')}
+                    <Avatar className='size-7 mt-1'>
+                        <AvatarImage src="https://github.com/shadcn.png" />
+                        <AvatarFallback>Perfil</AvatarFallback>
+                    </Avatar>
+                </div>
             </div>
-        </div>
+
+        </header>
     );
-}
+};
+
+export default Header;

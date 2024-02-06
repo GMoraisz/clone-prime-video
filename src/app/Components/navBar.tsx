@@ -155,7 +155,7 @@ const Header: React.FC = () => {
             <LojaDropdown />
             <MinhaAreaDropdown />
         </header>
-    );
+    );  
 };
 
 export default Header;
