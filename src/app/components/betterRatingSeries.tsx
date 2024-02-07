@@ -32,7 +32,7 @@ const SeriesList: React.FC = () => {
 
     const transitionDuration = 0.5; 
     return (
-        <div className={`max-w-[1175px] h-[200px] lg:h-[680px]  m-6 lg:m-auto relative`}>
+        <div className={`max-w-[1175px] h-[200px] lg:h-[680px] lg:m-auto relative`}>
             <div className='ml-6 flex shadow-black mb-2 text-xl font-semibold'>
                 <h1 className='text-blue-500 mr-5'> Prime </h1>
                 <span className='text-primary '> Séries com as melhores notas no IMDb</span>
