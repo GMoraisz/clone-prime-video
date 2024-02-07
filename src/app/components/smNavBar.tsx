@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar"
 import { IoChevronDown } from "react-icons/io5";
-import { HiOutlineHome, HiOutlineShoppingBag, HiOutlineDesktopComputer, HiOutlineMenuAlt4, HiOutlineUser, HiOutlineSearch } from "react-icons/hi";
-
+import { HiOutlineHome, HiOutlineShoppingBag, HiOutlineDesktopComputer, HiOutlineSearch } from "react-icons/hi";
+import { BiCategory } from "react-icons/bi";
+import { MdOutlineVideoLibrary } from "react-icons/md";
 
 
 interface DropdownLinkProps {
@@ -37,19 +38,24 @@ const DropdownLink: React.FC<DropdownLinkProps> = ({ text, href, icon, subMenu }
 };
 
 const CategoriasDropdown: React.FC = () => (
-    <div className="grid justify-center   pr-2">
+    <div className="grid justify-center pr-2"
+    >
+        
         <DropdownLink
             text="Gêneros"
             href="/generos"
             subMenu={<GenerosDropdown />}
+            icon={<IoChevronDown />}
         />
         <DropdownLink
             text="Coleções em destaque"
             href="/colecoes"
             subMenu={<ColecoesDropdown />}
+            icon={<IoChevronDown />}
         />
     </div>
 );
+
 
 const GenerosDropdown: React.FC = () => (
     <div className="absolute top-full left-0 bg-hover  rounded-md shadow-md w-screen" style={{ zIndex: 9999 }}>
@@ -74,7 +80,7 @@ const ColecoesDropdown: React.FC = () => (
         <DropdownLink text="LGBTQIAP+" href="/" />
         <DropdownLink text="Documentário" href="/" />
         <DropdownLink text="Lançamentos Direto do Cinema" href="/" />
-    
+
     </div>
 );
 
@@ -86,10 +92,10 @@ const MenuDropdown: React.FC = () => (
         <DropdownLink
             text="Categorias"
             href="/categorias"
-            icon={<HiOutlineMenuAlt4 className='mt-0.5 mr-1' />}
+            icon={<BiCategory className='mt-0.5 mr-1' />}
             subMenu={<CategoriasDropdown />}
         />
-        <DropdownLink text="Minha área" href="/live" icon={<HiOutlineUser className='mt-0.5 mr-1' />} />
+        <DropdownLink text="Minha área" href="/live" icon={<MdOutlineVideoLibrary className='mt-0.5 mr-1' />} />
     </div>
 );
 
