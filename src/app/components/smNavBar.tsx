@@ -37,10 +37,11 @@ const DropdownLink: React.FC<DropdownLinkProps> = ({ text, href, icon, subMenu }
     );
 };
 
-const CategoriasDropdown: React.FC = () => (
+const CategoriasDropdown: React.FC = () =>  (
+   
     <div className="grid justify-center pr-2"
     >
-        
+       
         <DropdownLink
             text="Gêneros"
             href="/generos"
@@ -94,6 +95,7 @@ const MenuDropdown: React.FC = () => (
             href="/categorias"
             icon={<BiCategory className='mt-0.5 mr-1' />}
             subMenu={<CategoriasDropdown />}
+            
         />
         <DropdownLink text="Minha área" href="/live" icon={<MdOutlineVideoLibrary className='mt-0.5 mr-1' />} />
     </div>
@@ -160,7 +162,7 @@ const Header: React.FC = () => {
                         {text === 'Menu' && <MenuDropdown />}
                         {text === 'Generos' && <GenerosDropdown />}
                         {text === 'Colecoes' && <ColecoesDropdown />}
-                        {text === 'User' && <PerfilDropdown />}
+                        {text === 'Avatar' && <PerfilDropdown />}
 
                     </>
                 )}

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col  max-h-screen w-screen">
       <div className="flex-grow"></div>
       <footer className="text-center text-footer py-6 font-medium text-sm w-full bg-black lg:text-base"> 
         <div className='flex justify-center items-center text-center ml-6'>
