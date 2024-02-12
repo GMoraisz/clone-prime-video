@@ -7,7 +7,7 @@ import SignaturesList from "../components/signatures";
 export default function Main() {
     return (
 
-        <div className="m-3">
+        <div className="mr-3 ">
 
             <main>
                 <div className="mt-4">

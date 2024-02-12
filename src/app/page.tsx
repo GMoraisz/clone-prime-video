@@ -4,9 +4,10 @@ import SeriesList from "../app/components/betterRatingSeries";
 import SignaturesList from "../app/components/signatures";
 
 
-export default function Home() {
+export default function Main() {
     return (
-        <div className="lg:h-[175vh]">
+
+        <div className="mr-3 ">
 
             <main>
                 <div className="mt-4">
@@ -18,7 +19,7 @@ export default function Home() {
                 </div>
 
                 <div className="mt-36">
-                    <SignaturesList/>
+                    <SignaturesList />
                 </div>
             </main>
 

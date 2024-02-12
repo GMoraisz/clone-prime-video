@@ -18,6 +18,8 @@ const config: Config = {
         primary: "#ffffff",
         secondary: "#aaaaaa",
         tertiary: "#ffd62c",
+        quarternary: "#f3f3f3",
+        chitenarian: "#f2f4f6",
         footer: "#8197a4",
         prime: "#025a6e",
       },
